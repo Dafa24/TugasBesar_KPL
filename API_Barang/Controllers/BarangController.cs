@@ -3,15 +3,16 @@ using API_Barang.Model;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace API_TUBES_KPL_KELOMPOK_05.Controllers
+namespace API_Barang.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BukuController : Controller
+    public class BarangController : Controller
     {
         private static List<Barang> DataDisplayBarang = new List<Barang>();
+        private string jsonFilePath;
 
-        public BukuController()
+        public BarangController()
         {
             string jsonFilePath = "D:\\TugasBesar_KPL\\API_Barang\\Data\\DataBarang.json";
             string jsonData = System.IO.File.ReadAllText(jsonFilePath);
@@ -60,5 +61,29 @@ namespace API_TUBES_KPL_KELOMPOK_05.Controllers
                 return StatusCode(500, "Terjadi kesalahan: " + ex.Message); // Mengembalikan respons 500 Internal Server Error dengan pesan
             }
         }
+        [HttpPost]
+        public void Post([FromBody] Barang Barang)
+        {
+            DataDisplayBarang.Add(Barang);
+            UpdateJsonFile();
+        }
+
+        private static void Add(Barang barang)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpDelete("{KodeBarang}")]
+        public void Delete(int id)
+        {
+            DataDisplayBarang.RemoveAt(id);
+        }
+
+        private void UpdateJsonFile()
+        {
+            string jsonData = JsonConvert.SerializeObject(DataDisplayBarang, Formatting.Indented);
+            System.IO.File.WriteAllText(jsonFilePath, jsonData);
+        }
+
     }
 }

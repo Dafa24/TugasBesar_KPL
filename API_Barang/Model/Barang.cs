@@ -1,4 +1,6 @@
-﻿namespace API_Barang.Model
+﻿
+
+namespace API_Barang.Model
 {
     public class Barang
     {
@@ -18,6 +20,15 @@
             this.HargaBarang = HargaBarang;
         }
 
+        internal static void Add(Barang barang)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static void RemoveAt(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
