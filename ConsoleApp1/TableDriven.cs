@@ -5,64 +5,53 @@ using System.Text;
 using System.Threading.Tasks;
 using static ConsoleApp1.TableDriven;
 
+
 namespace ConsoleApp1
 {
     internal class TableDriven
     {
-        public enum JenisBarang
+        public enum Elektronik
         {
-            Elektronik,
-            Pakaian,
-            Makananan,
+            Smartphone,
+            Tv,
+            Kulkas,
+            Laptop,
+            Keyboard,
+            Monitor,
+            Mouse,
+            Komputer
         }
 
-        public class Barang
+
+        public static int GetNamaElektronik(TableDriven inputnama)
+        {
+            string[] outputNama = { "Xiaomi 13T", "LG 24Mk", "Samsung Cooler", "ASUS ROG", "Razer", "Viewsonic", "Logitech", "HonzonGamingPC" };
+            return outputNama[(string)inputnama];
+        }
+
+
+       public class Barang
         {
             public int Id { get; set; }
             public string Nama { get; set; }
-            public string Deskripsi { get; set; }
             public int Harga { get; set; }
             public JenisBarang Jenis { get; set; }
         }
 
-
-        public class TabelInventaris
-        {
-            private Dictionary<int, Barang> tabelBarang;
-            private int nextId;
-
-            public TabelInventaris()
-            {
-                tabelBarang = new Dictionary<int, Barang>();
-                nextId = 1;
-            }
-
-            public void TambahBarang(string nama, string deskripsi, int harga, JenisBarang jenis)
-            {
-                Barang barang = new Barang
-                {
-                    Id = nextId,
-                    Nama = nama,
-                    Deskripsi = deskripsi,
-                    Harga = harga,
-                    Jenis = jenis,
-                };
-
-                tabelBarang.Add(nextId, barang);
-                nextId++;
-            }
-
-            public Barang GetBarang(int id)
-            {
-                if (tabelBarang.ContainsKey(id))
-                {
-                    return tabelBarang[id];
-                }
-                else
-                {
-                    return null; // Barang tidak ditemukan
-                }
-            }
+        public Barang(int id,string Nama, int Harga, JenisBarang Jenis) {
+            this.id = id;
+            this.Nama = Nama;
+            this.Harga = Harga;
+            this.JenisBarang = Jenis;
         }
+
+          public void displayBarang()
+        {
+            Console.WriteLine("Id : " + Id);
+            Console.WriteLine("Nama : " + Nama);
+            Console.WriteLine("Harga : " + Harga);
+            Console.WriteLine("Jenis Barang : " + JenisBarang);
+        }
+
     }
 }
