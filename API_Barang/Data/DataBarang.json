@@ -16,5 +16,17 @@
     "kodeBarang": "003",
     "jumlahBarang": 10,
     "hargaBarang": 140000
+  },
+  {
+    "namaBarang": "RAM DDR5 Kingston 16 GB",
+    "kodeBarang": "004",
+    "jumlahBarang": 80,
+    "hargaBarang": 500000
+  },
+  {
+    "namaBarang": "VGA RTX 4090 Nvidia ROG",
+    "kodeBarang": "005",
+    "jumlahBarang": 10,
+    "hargaBarang": 5000000
   }
 ]
