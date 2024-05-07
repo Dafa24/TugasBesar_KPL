@@ -31,7 +31,7 @@ namespace API_Barang.Controllers
             return DataDisplayBarang;
         }
 
-        // GET BOOK BY NamaBarang
+        // GET Barang BY NamaBarang
         [HttpGet("{NamaBarang}")]
         public ActionResult<Barang> GET(string NamaBarang)
         {
@@ -87,7 +87,7 @@ namespace API_Barang.Controllers
             }
         }
 
-        // DELETE BUKU BY NAMABARANG
+        // DELETE Barang BY NAMABARANG
         [HttpDelete("NamaBarang/{NamaBarang}")]
 
         public void DELETEBYNAMABARANG(String NamaBarang)
@@ -107,7 +107,7 @@ namespace API_Barang.Controllers
             }
         }
 
-        // DELETE BUKU BY KODEBARANG
+        // DELETE Barang BY KODEBARANG
         [HttpDelete("kode/{KodeBarang}")]
 
         public void DELETEBYKODEBARANG(int KodeBarang)
