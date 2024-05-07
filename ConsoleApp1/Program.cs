@@ -1,10 +1,11 @@
-﻿using ConsoleApp1;
+﻿using TableDriven;
 
 internal class Program
 {
-    private static void Main(string[] args)
+        public static void Main(string[] args)
     {
-        TableDriven test = new TableDriven();
-        
+        TableDriven alatElektronik = TableDriven.Komputer;
+        string namaAlat = GetNamaElektronik(alatElektronik);
+        Console.WriteLine("Bulan " + alatElektronik + " memiliki jumlah harinya adalah: " + namaAlat + " hari.");
     }
 }
