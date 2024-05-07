@@ -3,15 +3,15 @@ using API_Barang.Model;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace API_TUBES_KPL_KELOMPOK_05.Controllers
+namespace API_Barang.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BukuController : Controller
+    public class BarangController : Controller
     {
         private static List<Barang> DataDisplayBarang = new List<Barang>();
 
-        public BukuController()
+        public BarangController()
         {
             string jsonFilePath = "D:\\TugasBesar_KPL\\API_Barang\\Data\\DataBarang.json";
             string jsonData = System.IO.File.ReadAllText(jsonFilePath);
