@@ -61,29 +61,70 @@ namespace API_Barang.Controllers
                 return StatusCode(500, "Terjadi kesalahan: " + ex.Message); // Mengembalikan respons 500 Internal Server Error dengan pesan
             }
         }
+
+        // POST DATA Barang
         [HttpPost]
-        public void Post([FromBody] Barang Barang)
+        public void POST([FromBody] Barang newBarang)
         {
-            DataDisplayBarang.Add(Barang);
-            UpdateJsonFile();
+            int id = -1;
+            Boolean sama = false;
+
+            // CHECK KODE Barang
+            for (int i = 0; i < DataDisplayBarang.Count; i++)
+            {
+                if (newBarang.KodeBarang == DataDisplayBarang[i].KodeBarang)
+                {
+                    sama = true;
+                }
+            }
+
+            if (!sama)
+            {
+                DataDisplayBarang.Add(newBarang);
+                string jsonFilePath = "D:\\TugasBesar_KPL\\API_Barang\\Data\\DataBarang.json";
+                string jsonContent = JsonConvert.SerializeObject(DataDisplayBarang);
+                System.IO.File.WriteAllText(jsonFilePath, jsonContent);
+            }
         }
 
-        private static void Add(Barang barang)
+        // DELETE BUKU BY NAMABARANG
+        [HttpDelete("NamaBarang/{NamaBarang}")]
+
+        public void DELETEBYNAMABARANG(String NamaBarang)
         {
-            throw new NotImplementedException();
+            int id = -1;
+
+            for (int i = 0; i < DataDisplayBarang.Count; i++)
+            {
+                if (NamaBarang == DataDisplayBarang[i].NamaBarang)
+                {
+                    DataDisplayBarang.RemoveAt(i);
+                    string jsonFilePath = "D:\\TugasBesar_KPL\\API_Barang\\Data\\DataBarang.json";
+                    string jsonContent = JsonConvert.SerializeObject(DataDisplayBarang);
+                    System.IO.File.WriteAllText(jsonFilePath, jsonContent);
+                    break;
+                }
+            }
         }
 
-        [HttpDelete("{KodeBarang}")]
-        public void Delete(int id)
-        {
-            DataDisplayBarang.RemoveAt(id);
-        }
+        // DELETE BUKU BY KODEBARANG
+        [HttpDelete("kode/{KodeBarang}")]
 
-        private void UpdateJsonFile()
+        public void DELETEBYKODEBARANG(int KodeBarang)
         {
-            string jsonData = JsonConvert.SerializeObject(DataDisplayBarang, Formatting.Indented);
-            System.IO.File.WriteAllText(jsonFilePath, jsonData);
-        }
+            int id = -1;
 
+            for (int i = 0; i < DataDisplayBarang.Count; i++)
+            {
+                if (KodeBarang == DataDisplayBarang[i].KodeBarang)
+                {
+                    DataDisplayBarang.RemoveAt(i);
+                    string jsonFilePath = "D:\\TugasBesar_KPL\\API_Barang\\Data\\DataBarang.json";
+                    string jsonContent = JsonConvert.SerializeObject(DataDisplayBarang);
+                    System.IO.File.WriteAllText(jsonFilePath, jsonContent);
+                    break;
+                }
+            }
+        }
     }
 }
