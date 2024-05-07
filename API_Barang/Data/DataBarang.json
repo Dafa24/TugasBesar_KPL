@@ -1,0 +1,20 @@
+﻿[
+  {
+    "namaBarang": "Mouse Gaming Fantek",
+    "kodeBarang": "001",
+    "jumlahBarang": 20,
+    "hargaBarang": 120000
+  },
+  {
+    "namaBarang": "Keyboard Gaming Mechanical",
+    "kodeBarang": "002",
+    "jumlahBarang": 40,
+    "hargaBarang": 250000
+  },
+  {
+    "namaBarang": "Headset Gaming",
+    "kodeBarang": "003",
+    "jumlahBarang": 10,
+    "hargaBarang": 140000
+  }
+]
