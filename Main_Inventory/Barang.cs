@@ -1,12 +1,13 @@
-﻿
+﻿using System;
 
-namespace API_Barang.Model
+public class Class1
 {
-    public class Barang
-    {
+	public Class1()
+	{
+
         public string NamaBarang { get; set; }
 
-        public int KodeBarang { get; set; }a
+        public int KodeBarang { get; set; }
 
         public int JumlahBarang { get; set; }
 
@@ -18,17 +19,6 @@ namespace API_Barang.Model
             this.KodeBarang = KodeBarang;
             this.JumlahBarang = JumlahBarang;
             this.HargaBarang = HargaBarang;
-        }
-
-        internal static void Add(Barang barang)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal static void RemoveAt(int id)
-        {
-            throw new NotImplementedException();
-        }
-    }
+        }   
 }
-
+}
