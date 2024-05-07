@@ -28,13 +28,40 @@ namespace ConsoleApp1
 
         public class TabelInventaris
         {
-            private data<int, Barang> tabelBarang;
+            private Dictionary<int, Barang> tabelBarang;
             private int nextId;
 
             public TabelInventaris()
             {
-                tabelBarang = new data<int, Barang>();
+                tabelBarang = new Dictionary<int, Barang>();
                 nextId = 1;
+            }
+
+            public void TambahBarang(string nama, string deskripsi, int harga, JenisBarang jenis)
+            {
+                Barang barang = new Barang
+                {
+                    Id = nextId,
+                    Nama = nama,
+                    Deskripsi = deskripsi,
+                    Harga = harga,
+                    Jenis = jenis,
+                };
+
+                tabelBarang.Add(nextId, barang);
+                nextId++;
+            }
+
+            public Barang GetBarang(int id)
+            {
+                if (tabelBarang.ContainsKey(id))
+                {
+                    return tabelBarang[id];
+                }
+                else
+                {
+                    return null; // Barang tidak ditemukan
+                }
             }
         }
     }

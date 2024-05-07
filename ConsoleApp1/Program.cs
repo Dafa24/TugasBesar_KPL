@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using ConsoleApp1;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        TableDriven test = new TableDriven();
+        
+    }
+}
