@@ -1,6 +1,4 @@
-﻿
-
-namespace API_Barang.Model
+﻿namespace API_Barang.Model
 {
     public class Barang
     {
