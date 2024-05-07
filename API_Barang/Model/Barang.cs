@@ -4,7 +4,7 @@
     {
         public string NamaBarang { get; set; }
 
-        public int KodeBarang { get; set; }a
+        public int KodeBarang { get; set; }
 
         public int JumlahBarang { get; set; }
 
