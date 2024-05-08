@@ -1,0 +1,44 @@
+[33mcommit d279881d482662765d53ca86a6fc19ec383e34e4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mirji[m[33m, [m[1;31morigin/irji[m[33m)[m
+Author: IrjiSyahrul <irjisyahrukchannel@gmail.com>
+Date:   Wed May 8 00:46:48 2024 +0700
+
+    Table Driven method (source lms)
+
+[33mcommit 2be874cc9ad615ae9c0481e3202d66f936635c28[m
+Author: IrjiSyahrul <irjisyahrukchannel@gmail.com>
+Date:   Wed May 8 00:46:26 2024 +0700
+
+    Table Driven method (source lms)
+
+[33mcommit 27ecbaf7846e5cf500f900d83ec28c947790d6a7[m
+Author: IrjiSyahrul <irjisyahrukchannel@gmail.com>
+Date:   Tue May 7 20:37:07 2024 +0700
+
+    update table driven
+
+[33mcommit f615537bdfb2fe8cee34d57165f160ce2bf8002b[m
+Author: IrjiSyahrul <irjisyahrukchannel@gmail.com>
+Date:   Tue May 7 13:55:05 2024 +0700
+
+    Table Driven (masih error)
+
+[33mcommit 007a4ca242684c066d9d69b02d1ae0186043831c[m
+Merge: 26a9c56 028db47
+Author: Dafa24 <53173575+Dafa24@users.noreply.github.com>
+Date:   Tue May 7 13:20:09 2024 +0700
+
+    Merge pull request #1 from Dafa24/dafa
+    
+    Adding Readme.md
+
+[33mcommit 028db47590ded00f3bdc278f8d31e3e786741f4c[m
+Author: Dafa24 <53173575+Dafa24@users.noreply.github.com>
+Date:   Tue May 7 13:19:07 2024 +0700
+
+    Adding Readme.md
+
+[33mcommit 26a9c564cb9c57c104c25383d57a84af9841fa13[m
+Author: Dafa24 <53173575+Dafa24@users.noreply.github.com>
+Date:   Tue May 7 12:59:17 2024 +0700
+
+    Inisialisasi Projek dan Adding API with Model Data and Controller
