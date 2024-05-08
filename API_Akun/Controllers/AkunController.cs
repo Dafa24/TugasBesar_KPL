@@ -66,7 +66,6 @@ namespace API_Barang.Controllers
         [HttpPost]
         public void POST([FromBody] Akun newAkun)
         {
-            int id = -1;
             Boolean sama = false;
 
             // CHECK Nama Barang
