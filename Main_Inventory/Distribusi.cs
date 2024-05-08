@@ -8,15 +8,14 @@ using System.Threading.Tasks;
 public class Distribusi
 
 {
-	public Pendistribusian()
+	public Distribusi()
 	{
-		public string namaDistributor { get; set; }
-		public string  namaAdmin{ get; set;}
+		public string Nama { get; set; }
 	}
-	//constructor dari method pendistribusian
-	public Pendistribusian(string namaDistributor,string namaAdmin)
+//constructor dari method pendistribusian
+	public Distribusi(string Nama)
 	{
-		this.namaDistributor = namaDistributor;
-		this.namaAdmin = namaAdmin;
+		this.Nama = namaDistributor;
 	}
 }
+

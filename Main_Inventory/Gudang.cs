@@ -3,31 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LibraryInven;
+using Main_Inventory;
 
 
-namespace Main_Inventori
+namespace Main_Inventory
 {
 	internal class Gudang
 	{
-          private List<Barang> Barang = new List<Barang>
+        private List<Barang> DataBarang = new List<Barang>
              {
-                new Barang("Ipad", "K001", 10 ,25000),
-                new Barang("Laptop", "K002", 15 ,28000),
-                new Barang("Keyboard", "K003", 20 ,35000),
+                new Barang("Ipad", 1, 10 ,25000),
+                new Barang("Laptop",2 , 15 ,28000),
+                new Barang("Keyboard",3, 20 ,35000),
 
             };
-    public void cariBarang(string NamaBarang)
+
+        public void cariBarang(string NamaBarang)
         {
 
-            for (int i = 0; i < barangArray.Length; i++)
+            for (int i = 0; i < DataBarang.Count; i++)
             {
-                if (judul == barangArray[i].NamaBarang)
+                if (NamaBarang == DataBarang[i].NamaBarang)
                 {
-                    Console.WriteLine("Nama Barang: " + barangArray[i].NamaBarang);
-                    Console.WriteLine("Kode Barang" + barangArray[i].KodeBarang);
-                    Console.WriteLine("Jumlah Barang: " + barangArray[i].JumlahBarang);
-                    Console.WriteLine("Harga Barang: " + barangArray[i].HargaBarang);
+                    Console.WriteLine("Nama Barang: " + DataBarang[i].NamaBarang);
+                    Console.WriteLine("Kode Barang" + DataBarang[i].KodeBarang);
+                    Console.WriteLine("Jumlah Barang: " + DataBarang[i].JumlahBarang);
+                    Console.WriteLine("Harga Barang: " + DataBarang[i].HargaBarang);
                   
                 }
             }
@@ -36,9 +37,9 @@ namespace Main_Inventori
     {
         int index = -1;
 
-        for (int i = 0; i < barangArray.Length; i++)
+        for (int i = 0; i < DataBarang.Count; i++)
         {
-            if (NamaBarang == barangArray[i].NamaBarang)
+            if (NamaBarang == DataBarang[i].NamaBarang)
             {
                 return index = i;
                 break;
