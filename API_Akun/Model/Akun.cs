@@ -6,7 +6,7 @@
 
         public string Role  { get; set; }
 
-        public Akun(string NamaBarang, string Role)
+        public Akun(string Nama, string Role)
         {
             this.Nama = Nama;
             this.Role = Role;
