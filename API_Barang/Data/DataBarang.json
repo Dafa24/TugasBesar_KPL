@@ -1,20 +1,13 @@
-﻿[
+[
   {
-    "namaBarang": "Mouse Gaming Fantek",
-    "kodeBarang": "001",
-    "jumlahBarang": 20,
-    "hargaBarang": 120000
+    "NamaBarang": "Keyboard Gaming Mechanical",
+    "KodeBarang": 2,
+    "JumlahBarang": 40,
+    "HargaBarang": 250000
   },
   {
-    "namaBarang": "Keyboard Gaming Mechanical",
-    "kodeBarang": "002",
-    "jumlahBarang": 40,
-    "hargaBarang": 250000
-  },
-  {
-    "namaBarang": "Headset Gaming",
-    "kodeBarang": "003",
-    "jumlahBarang": 10,
-    "hargaBarang": 140000
-  }
-]
+    "NamaBarang": "VGA RTX 4090 Nvidia ROG",
+    "KodeBarang": 5,
+    "JumlahBarang": 10,
+    "HargaBarang": 5000000
+  }]

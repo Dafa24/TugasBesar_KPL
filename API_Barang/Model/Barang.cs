@@ -18,6 +18,15 @@
             this.HargaBarang = HargaBarang;
         }
 
+        internal static void Add(Barang barang)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static void RemoveAt(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

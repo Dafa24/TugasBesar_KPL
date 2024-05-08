@@ -1,11 +1,28 @@
-﻿using TableDriven;
+using Class1;
+using Table1;
+
 
 internal class Program
 {
-        public static void Main(string[] args)
+    static void Main(string[] args)
     {
-        TableDriven alatElektronik = TableDriven.Komputer;
-        string namaAlat = GetNamaElektronik(alatElektronik);
-        Console.WriteLine("Bulan " + alatElektronik + " memiliki jumlah harinya adalah: " + namaAlat + " hari.");
+        Inventaris inventarisBarang = new Inventaris();
+
+
+        inventarisBarang.TambahStokBarang("Laptop", 01, 10, 150000, "Elektronik");
+        inventarisBarang.TambahStokBarang("SmartPhone", 02, 50, 20000, "Elektronik");
+        inventarisBarang.TambahStokBarang("Keyboard", 03, 15, 70000, "Elektronik");
+
+        inventarisBarang.TampilkanInventaris();
+
+        inventarisBarang.HapusBarang("Keyboard", 03, 15, 70000, "Elektronik");
+        Console.WriteLine("============= Barang berhasil dihapus =================");
+        Console.WriteLine("");
+
+        inventarisBarang.TampilkanInventaris();
+
+        TableDriven tableDriven = new TableDriven();
+        tableDriven.GetdisplayInfo();
     }
+
 }
