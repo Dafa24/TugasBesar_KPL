@@ -1,10 +1,11 @@
-﻿/*using ConsoleApp1;
+﻿using Class1;
+using TableDriven;
+
 
 internal class Program
 {
-    private static void Main(string[] args)
+    static void Main(string[] args)
     {
-        TableDriven test = new TableDriven();
-        
     }
-}*/
+
+}
